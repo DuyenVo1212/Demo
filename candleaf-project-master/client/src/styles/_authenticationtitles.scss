@@ -1,0 +1,33 @@
+@import "variables";
+
+.authentication-titles{
+    font-family: $font-roboto;
+    margin-left: 165px;
+    margin-top: 20px;
+    
+        .title{
+            text-decoration: none;
+            color: rgba(97, 97, 97, 1);
+        }
+    
+        i{
+            margin: 0 10px;
+            color: rgba(97, 97, 97, 1);
+        }
+    
+        .cart-title{
+            color: $primary-color;
+        }
+    
+        .active{
+            color: black;
+            font-weight: 500;
+        }
+}
+
+@include mobile(1450px){
+    .authentication-titles{
+        margin-left: 0;
+        margin-bottom: 48px;
+    }
+}

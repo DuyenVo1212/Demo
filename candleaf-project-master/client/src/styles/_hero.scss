@@ -1,0 +1,143 @@
+@import 'variables';
+@import 'mixin';
+
+.hero-container{
+    font-family: $font-poppins;
+    @include marginCenter;
+    position: relative; 
+    height: 705px;
+
+    .hero-img{  
+        width: 100%;   
+        height: 705px;
+        object-fit: cover;
+    }
+    
+    .hero-modal{
+        border: 1px solid rgb(196, 196, 196);
+        background: rgba(247, 248, 250, 0.8);;
+        backdrop-filter: blur(24px);    
+        border-radius: 2px;
+        width: 730px;
+        height: 350px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        left: 50%;    
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+        &__title{
+            font-size: 40px;
+            font-weight: 500;  
+        }
+    
+        &__subtitle{
+            font-family: $font-roboto;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 45px;
+            max-width: 620px;
+            font-weight: 400;           
+        }
+    
+        &__discovery-btn{
+            text-decoration: none;
+            font-family: $font-roboto;
+            // max-width: 310px;
+            // height: 40px;
+            background: $primary-color;
+            border-radius: 4px;
+            display: block;
+            margin: 0 auto;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: white;
+            padding: 8px 45px;
+            @include flexCenter;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: 0.3s ease;
+
+            &:hover{
+                @include hoverButton;
+            }
+
+            &:active{
+                background: $primary-color;
+                color: white;
+            }
+        }
+    }
+}
+
+@include mobile(850px) {
+    .hero-container{
+        
+        .hero-modal{
+            width: 90vw;
+        }
+    }    
+}
+
+@include mobile(376px){
+    .hero-container{
+
+        .hero-modal{
+
+            &__title{
+                line-height: 48px;
+                margin-bottom: 10px;
+            }
+
+            &__subtitle{
+                line-height: 20px;
+                margin-bottom: 35px;
+            }
+
+            &__discovery-btn{
+
+            }
+        }
+    }
+}
+
+@include mobile(350px){
+    .hero-container{
+
+        .hero-modal{
+
+            &__title{
+                line-height: 48px;
+                margin-bottom: 10px;
+            }
+
+            &__discovery-btn{
+                padding: 5px 10px;
+            }
+        }
+    }
+}
+
+@include mobile(280px){
+    .hero-container{
+
+        .hero-modal{
+
+            &__title{
+                line-height: 48px;
+                margin-bottom: 10px;
+            }
+
+            &__discovery-btn{
+                padding: 5px 10px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+

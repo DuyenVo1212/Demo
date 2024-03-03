@@ -1,0 +1,124 @@
+@import 'variables';
+@import 'mixin';
+
+.footer-container{
+    font-family: $font-poppins;
+    @include marginCenter;
+    background-color: #272727;
+    color: white;
+    padding: 60px 0 95px;
+    
+    .footer-underline{
+        max-width: 1110px;
+        margin: 0 auto;
+        height: 0.1rem;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .footer-info{
+        max-width: 1110px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        .footer-header{
+            margin-top: 16px;
+            
+            &__logo{
+                @include flexCenter;
+                max-width: 250px;
+                margin-bottom: 16px;
+            }
+
+            &__img{
+                margin-right: 12px;
+                width: 63.36px;
+                height: 63.36px;
+            }
+            
+            &__title{
+                width: 160.7px;
+                height: 27.55px;
+            }
+
+            &__subtitle{
+                font-style: normal;
+                max-width: 255px;
+                height: 46px;
+                font-weight: 400;
+                line-height: 23px;
+                letter-spacing: -0.5px;
+                font-size: 16px;
+            }
+        }
+
+        .footer-informations{
+            display: flex;
+            margin-top: 44px;
+        }
+
+        .discovery,
+        .about,
+        .info{
+            margin: 0 20px 20px;
+
+            &__title{
+                color: $primary-color;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 29px;
+                margin-bottom: 25px;
+            }
+
+            &__informations{
+
+                p{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 29px;
+                    color: #E1E1E1;
+                    margin-bottom: 20px;
+
+                    i{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        .about{
+            @extend .discovery;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .footer-container{
+
+        .footer-info{
+            display: inline;
+            flex-direction: column;
+            margin: 0 auto;
+            width: fit-content;
+            
+            .footer-header{
+                margin: 16px 10px 20px;
+
+                &__logo{
+                    border: none;
+                }
+
+                &__subtitle{
+                    max-width: none;
+                }
+            }
+
+            .footer-informations{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: start;
+            }
+        }
+    }
+}
+

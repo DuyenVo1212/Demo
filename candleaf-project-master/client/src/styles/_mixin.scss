@@ -1,0 +1,31 @@
+@import 'variables';
+
+@mixin flexCenter($justifyContent: none) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: center;
+}
+
+@mixin marginCenter{
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+@mixin mobile($maxWidth){
+    @media screen and (max-width: $maxWidth) {
+        @content;
+    }
+}
+
+@mixin hoverButton{
+    background-color: white;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+}
+
+@mixin formStyle{
+    margin-top: 47px;
+    max-width: 735px;
+    padding: 0 125px 0 165px;
+    margin-bottom: 40px;
+}

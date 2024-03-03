@@ -1,0 +1,41 @@
+*,
+::after, 
+::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home-page,
+.about-page,
+.products-page,
+.single-product-page,
+.cart-page
+.authentication-page,
+.shipping-page,
+.payment-page{
+    padding-top: 75px;
+}
+
+.loading{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid rgb(194, 194, 194);
+    animation: loading 0.7s linear infinite;
+    border-top: 10px solid black;
+    margin: 250px auto 1000px;
+}
+
+@keyframes loading {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
